@@ -1,7 +1,4 @@
-import model.Group;
 import model.Players;
-import model.Team;
-
 import java.util.ArrayList;
 
 public class Main {
