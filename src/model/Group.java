@@ -1,8 +1,19 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Group {
-    public Group(String name) {
+    public Group(ArrayList<Team> team, String name) {
+        this.team = team;
         Name = name;
+    }
+
+    public ArrayList<Team> getTeam() {
+        return team;
+    }
+
+    public void setTeam(ArrayList<Team> team) {
+        this.team = team;
     }
 
     public String getName() {
@@ -13,5 +24,6 @@ public class Group {
         Name = name;
     }
 
+    ArrayList<Team> team;
     String Name;
 }

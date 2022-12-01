@@ -1,12 +1,21 @@
 package model;
 
-public class Team {
-    String Name;
+import java.util.ArrayList;
 
-    public Team(String name, String jersey_Color, String position) {
+public class Team {
+    public Team(ArrayList<model.Players> players, String name, String jersey_color, String position) {
+        Players = players;
         Name = name;
-        Jersey_Color = jersey_Color;
+        this.jersey_color = jersey_color;
         this.position = position;
+    }
+
+    public ArrayList<model.Players> getPlayers() {
+        return Players;
+    }
+
+    public void setPlayers(ArrayList<model.Players> players) {
+        Players = players;
     }
 
     public String getName() {
@@ -17,12 +26,12 @@ public class Team {
         Name = name;
     }
 
-    public String getJersey_Color() {
-        return Jersey_Color;
+    public String getJersey_color() {
+        return jersey_color;
     }
 
-    public void setJersey_Color(String jersey_Color) {
-        Jersey_Color = jersey_Color;
+    public void setJersey_color(String jersey_color) {
+        this.jersey_color = jersey_color;
     }
 
     public String getPosition() {
@@ -33,6 +42,9 @@ public class Team {
         this.position = position;
     }
 
-    String Jersey_Color;
+    ArrayList<Players> Players;
+    String Name;
+    String jersey_color;
     String position;
+
 }
